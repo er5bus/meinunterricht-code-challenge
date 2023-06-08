@@ -1,0 +1,51 @@
+{
+  "name": "meinunterricht-code-challenge",
+  "version": "0.0.1",
+  "description": "meinunterricht-code-challenge",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "elasticsearch": "npx babel-node src/commands/elasticsearch.command.js",
+    "load": "npx babel-node src/commands/load.command.js",
+    "test": "NODE_ENV=test npx jest",
+    "start": "nodemon --exec babel-node src/server.js",
+    "build": "babel src --copy-files --out-dir dist",
+    "serve": "node dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/er5bus/meinunterricht-code-challenge.git"
+  },
+  "keywords": [
+    "code",
+    "challenge"
+  ],
+  "author": "Rami Sfari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/er5bus/meinunterricht-code-challenge/issues"
+  },
+  "homepage": "https://github.com/er5bus/meinunterricht-code-challenge#readme",
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.8.0",
+    "axios": "^1.4.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "http": "^0.0.1-security",
+    "morgan": "^1.10.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "supertest": "^6.3.3",
+    "jest": "^29.5.0",
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.22.1",
+    "@babel/node": "^7.22.1",
+    "@babel/preset-env": "^7.22.4",
+    "@types/helmet": "^4.0.0",
+    "nodemon": "^2.0.22"
+  }
+}
